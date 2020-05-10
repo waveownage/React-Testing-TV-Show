@@ -1,5 +1,6 @@
 import React from 'react';
 import parse from 'html-react-parser';
+import { Link } from "react-router-dom";
 
 export default function Episodes(props) {
   return (
@@ -17,6 +18,7 @@ export default function Episodes(props) {
             {e.summary && parse(e.summary)}
             <div className="flex-spacer" />
             <p className="episode-runtime">{e.runtime} minutes</p>
+            <a href={e.url}>Visit Page</a>
           </div>
         </div>
       ))}
